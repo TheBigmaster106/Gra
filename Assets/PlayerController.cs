@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControler : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public float moveSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,23 +14,26 @@ public class PlayerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //pobieraniie kontrolera (poziom)
-        float x = Input.GetAxis("Horizontal");
-        //wylicz docelowy ruch poziomu (lewo/  prawo w osi x ) mozac wychylenie kontrolera 
-        Vector3 movement = Vector3.right * x * Time.deltaTime;
+        //pobierz stan kontrolera (poziom)
+        float x = Input.GetAxisRaw("Horizontal");
+        //wylicz docelowy ruch poziomo (lewo/prawo po osi x) mno¿¹c wychylenie kontrolera przez "1"
+        Vector3 movement = Vector3.right * x;
 
-        //pobieraniie kontrolera (poziom)
-        float y = Input.GetAxis("Vertical");
-        //wylicz docelowy ruch poziomu (lewo/  prawo w osi y ) mozac wychylenie kontrolera 
-         movement += Vector3.forward * y * Time.deltaTime;
+        //pobierz stan kontrolera (pion)
+        float y = Input.GetAxisRaw("Vertical");
+        movement += Vector3.forward * y;
 
+        //normalizuj ruch
         movement = movement.normalized;
 
+        //przelicz przez czas od ostatniej klatki
+        movement *= Time.deltaTime;
+
+        //pomnó¿ ruch przez prêdkoœæ
         movement *= moveSpeed;
 
-
-        transform.position = movement;
+        //na³ó¿ zmianê po³o¿enia na obiekt gracza
+        transform.position += movement;
 
     }
 }
-
