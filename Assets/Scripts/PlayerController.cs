@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         //pobierz stan kontrolera (poziom)
         float x = Input.GetAxisRaw("Horizontal");
-        //wylicz docelowy ruch poziomo (lewo/prawo po osi x) mno¿¹c wychylenie kontrolera przez "1"
+        //wylicz docelowy ruch poziomo (lewo/prawo po osi x) mnożąc wychylenie kontrolera przez "1"
         Vector3 movement = Vector3.right * x;
 
         //pobierz stan kontrolera (pion)
@@ -29,11 +29,11 @@ public class PlayerController : MonoBehaviour
         //przelicz przez czas od ostatniej klatki
         movement *= Time.deltaTime;
 
-        //pomnó¿ ruch przez prêdkoœæ
+        //pomnóż ruch przez prędkość
         movement *= moveSpeed;
 
-        //na³ó¿ zmianê po³o¿enia na obiekt gracza
+        //nałóż zmianę położenia na obiekt gracza
         transform.position += movement;
-
+        
     }
 }

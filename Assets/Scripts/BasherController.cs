@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class BasherController : MonoBehaviour
 {
     //gracz
     GameObject player;
-    //prêdkoœæ pod¹¿ania za graczem
+    //prÄ™dkoÅ›Ä‡ podÄ…Å¼ania za graczem
     public float walkSpeed = 1f;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class BasherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //patrz siê na gracza
+        //patrz siÄ™ na gracza
         transform.LookAt(player.transform.position);
         //idz do przodu
         transform.position += transform.forward * Time.deltaTime * walkSpeed;

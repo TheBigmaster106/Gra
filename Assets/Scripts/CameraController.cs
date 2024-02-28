@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
     Transform player;
     //offset kamery
     Vector3 offset;
+    //prędkość kamery
+    Vector3 cameraSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //policz now¹ pozycjê kamery
+        //policz nową pozycję kamery
         Vector3 targetPosition = player.position + offset;
-        //przesuñ kamerê w kierunku celu
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
+        //przesuń kamerę w kierunku celu
+        //transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
+        
+        //trzecia metoda - smoothdamp
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref cameraSpeed, 0.3f);
     }
 }
