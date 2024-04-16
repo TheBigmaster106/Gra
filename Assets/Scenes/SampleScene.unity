@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4aaf5e027e01bd541a762d1ba0759e68, type: 2}
+  - {fileID: 2100000, guid: cf34825e8f114c146b04124b7707836b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1207,6 +1207,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: af76acc82cf42974498c0be1de6dcfa5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f88eba5b10abc843a3d1a3d82821215, type: 2}
     - target: {fileID: 919132149155446097, guid: af76acc82cf42974498c0be1de6dcfa5, type: 3}
       propertyPath: m_Name
       value: czolg
@@ -1755,6 +1759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fb5c7c50ddb54b64285c8a7324d1d6e2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f88eba5b10abc843a3d1a3d82821215, type: 2}
     - target: {fileID: 919132149155446097, guid: fb5c7c50ddb54b64285c8a7324d1d6e2, type: 3}
       propertyPath: m_Name
       value: lufa
