@@ -19,4 +19,4 @@
 3. Open this project in the editor version **2023.2.9f1.**
 
 ## Authors
--  [Toifesz](https://github.com/TheBigMaster106/) - Models / developer
+-  [Toifesz](https://github.com/TheBigMaster106/)(me) - Models / developer
